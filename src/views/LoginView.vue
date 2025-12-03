@@ -16,11 +16,11 @@ const handleSubmit = async () => {
 
   try {
     await signInWithEmailAndPassword(auth, email.value, password.value);
-    feedback.value = 'Sesión iniciada. Redirigiendo al dashboard...';
+    feedback.value = 'Sesion iniciada. Redirigiendo al dashboard...';
 
     router.push('/dashboard');
   } catch (error) {
-    feedback.value = error.message || 'Ocurrió un error al autenticar.';
+    feedback.value = error.message || 'Ocurrio un error al autenticar.';
   } finally {
     loading.value = false;
   }
